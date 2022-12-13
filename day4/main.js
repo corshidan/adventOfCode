@@ -1029,7 +1029,7 @@ const getPairs = (array) => {
 		const [first, second] = pair.split(',');
 		const [firstStart, firstEnd] = first.split('-');
 		const [secondStart, secondEnd] = second.split('-');
-		if (first && second) {
+		if (+firstStart === +secondStart && +firstEnd === +secondEnd) {
 			count++;
 			return;
 		}
